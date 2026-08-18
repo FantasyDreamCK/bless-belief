@@ -1,7 +1,6 @@
 # 🏮 騎蹟到府 (The Divine Delivery Miracle)
 
 > **臺灣現代神話輕小說・原創正傳完結篇**  
-> 《神明公關：誰是績優股》（原創企劃：騎蹟到府：開工啦！）前傳小說  
 
 [![GitHub Pages](https://img.shields.io/badge/Online%20Reader-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://fantasydreamck.github.io/bless-belief/)
 
@@ -29,18 +28,10 @@
 
 ---
 
-## 📂 檔案架構
-
-* `index.html`：單檔案整合式小說在線閱讀器（Zero-dependency，可直接部署至 GitHub Pages）。
-* `騎蹟到府_正傳連載.md`：正傳完整 Markdown 原始文本。
-* `世界觀與角色設定集.md`：神使願力宇宙設定、人物檔案與世界觀解析。
-
----
-
 ## 🌐 線上閱讀網址
 
 👉 **[立即進入《騎蹟到府》線上閱讀器](https://fantasydreamck.github.io/bless-belief/)**
 
 ---
 
-© 眾神守衛隊 ｜ 國立聯合大學 畢業專題設計作品
+© 眾神守衛隊
