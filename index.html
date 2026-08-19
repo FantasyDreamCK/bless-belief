@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>騎蹟到府 | 現代神話輕小說・正傳全集</title>
+    <title>騎蹟到府 | 現代神話輕小說・正傳連載</title>
     <meta name="description" content="臺灣現代神話輕小說《騎蹟到府》：當截稿地獄的漫畫家誤飲孟婆忘情水，騎上八卦噴射機車，穿梭大疫街頭傳遞神明祝福與人間微光。">
-    <meta property="og:title" content="騎蹟到府 | 現代神話輕小說・正傳全集">
-    <meta property="og:description" content="臺灣現代神話輕小說《騎蹟到府》・原創正傳完結篇 在線極致體驗閱讀器">
+    <meta property="og:title" content="騎蹟到府 | 現代神話輕小說・正傳連載">
+    <meta property="og:description" content="臺灣現代神話輕小說《騎蹟到府》・原創正傳連載 在線極致體驗閱讀器">
     <meta property="og:type" content="book">
     
     <!-- Google Fonts -->
@@ -247,7 +247,7 @@
         /* Hero Banner */
         .novel-hero {
             text-align: center;
-            padding: 3rem 1rem 4rem 1rem;
+            padding: 3rem 1rem 3.5rem 1rem;
             margin-bottom: 2.5rem;
             border-bottom: 1px solid var(--border-subtle);
             position: relative;
@@ -302,12 +302,184 @@
             gap: 1.5rem;
             font-size: 0.85rem;
             color: var(--text-muted);
+            margin-bottom: 1.5rem;
         }
 
         .meta-pill {
             display: flex;
             align-items: center;
             gap: 0.35rem;
+        }
+
+        /* Serialization Components & Lock Styles */
+        .serial-banner {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-accent);
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            box-shadow: 0 4px 20px var(--glow-color);
+            text-align: left;
+            margin-top: 0.5rem;
+        }
+
+        .serial-banner-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .serial-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(244, 63, 94, 0.2));
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.3rem 0.65rem;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .serial-banner-text {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .serial-banner-text strong {
+            color: var(--accent-cyan);
+        }
+
+        .serial-jump-btn {
+            background: var(--accent-gold);
+            color: #000;
+            border: none;
+            padding: 0.45rem 0.95rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: all 0.2s ease;
+        }
+
+        .serial-jump-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        /* Locked Chapter / Section Card */
+        .locked-section-card {
+            background: var(--bg-surface);
+            border: 1px dashed var(--border-accent);
+            border-radius: 16px;
+            padding: 2.8rem 1.5rem;
+            margin: 1.5rem 0 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .locked-section-card::before {
+            content: "☯";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14rem;
+            color: var(--border-subtle);
+            opacity: 0.12;
+            pointer-events: none;
+            font-family: serif;
+        }
+
+        .lock-icon-wrap {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.2rem auto;
+            border-radius: 50%;
+            background: var(--bg-elevated);
+            border: 1px solid var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 0 20px var(--glow-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        .lock-card-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lock-card-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            max-width: 480px;
+            margin: 0 auto 1.25rem auto;
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lock-countdown-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            padding: 0.4rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lock-card-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .lock-action-btn {
+            padding: 0.45rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border-subtle);
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .lock-action-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
         }
 
         /* Chapter Headings */
@@ -331,6 +503,26 @@
             font-weight: 800;
             color: var(--text-primary);
             letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .chapter-status-badge {
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 0.2rem 0.55rem;
+            border-radius: 12px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .chapter-status-badge.locked {
+            background: rgba(100, 116, 139, 0.2);
+            color: var(--text-muted);
+            border: 1px solid var(--border-subtle);
         }
 
         .section-header {
@@ -525,7 +717,7 @@
             top: 0;
             left: 0;
             bottom: 0;
-            width: 320px;
+            width: 330px;
             max-width: 85vw;
             background: var(--bg-surface);
             border-right: 1px solid var(--border-subtle);
@@ -577,7 +769,9 @@
             border-radius: 8px;
             margin-top: 0.5rem;
             cursor: pointer;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             text-decoration: none;
             transition: background 0.15s ease;
         }
@@ -591,7 +785,9 @@
             color: var(--text-secondary);
             padding: 0.45rem 0.75rem 0.45rem 1.6rem;
             border-radius: 6px;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             text-decoration: none;
             transition: all 0.15s ease;
             position: relative;
@@ -618,6 +814,41 @@
             height: 14px;
             border-radius: 2px;
             background: var(--accent-cyan);
+        }
+
+        .toc-item-sec.locked {
+            color: var(--text-muted);
+            opacity: 0.65;
+            cursor: pointer;
+        }
+
+        .toc-item-sec.locked:hover {
+            opacity: 1;
+            background: rgba(244, 63, 94, 0.08);
+            color: var(--accent-crimson);
+        }
+
+        .toc-lock-tag {
+            font-size: 0.72rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            margin-left: auto;
+            white-space: nowrap;
+        }
+
+        .toc-new-tag {
+            font-size: 0.72rem;
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+            background: rgba(245, 158, 11, 0.2);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-left: auto;
+            white-space: nowrap;
         }
 
         /* Settings Modal / Drawer */
@@ -768,7 +999,7 @@
             background: var(--bg-elevated);
         }
 
-        /* Resume Toast */
+        /* Toast Notifications */
         .toast-resume {
             position: fixed;
             bottom: 5.5rem;
@@ -853,6 +1084,10 @@
             .floating-btn span {
                 display: none;
             }
+            .serial-banner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -867,7 +1102,7 @@
             <div class="brand-badge">☯</div>
             <div class="brand-text">
                 <h1>騎蹟到府</h1>
-                <span>現代神話輕小說・正傳</span>
+                <span>現代神話輕小說・每日連載中</span>
             </div>
         </div>
         <div class="header-actions">
@@ -882,13 +1117,26 @@
         
         <!-- Novel Hero -->
         <div class="novel-hero">
-            <span class="hero-tag">Taiwan Urban Fantasy</span>
+            <span class="hero-tag">Taiwan Urban Fantasy ｜ 每日更新</span>
             <h1 class="hero-title">騎蹟到府</h1>
             <p class="hero-author">作者：眾神守衛隊 ｜ 現代神話輕小說正傳</p>
             <div class="hero-meta-grid">
                 <div class="meta-pill">📖 5 大篇章</div>
                 <div class="meta-pill">⚡ 約 21,428 字</div>
                 <div class="meta-pill">⏳ 閱讀約 48 分鐘</div>
+            </div>
+
+            <!-- Serialization Live Banner -->
+            <div class="serial-banner" id="hero-serial-banner">
+                <div class="serial-banner-info">
+                    <span class="serial-status-badge">🔥 連載更新中</span>
+                    <div class="serial-banner-text">
+                        <span>今日解鎖至：<strong id="hero-latest-chapter-name">第 2-1 章 密室</strong> ｜ 已解鎖 <strong id="hero-unlocked-count">6</strong>/15 回</span>
+                    </div>
+                </div>
+                <a href="#sec-2-1" class="serial-jump-btn" id="hero-jump-latest">
+                    <span>⚡ 閱讀最新回</span>
+                </a>
             </div>
         </div>
 
@@ -897,14 +1145,14 @@
         <!-- Chapter 1: 第一章  截稿日 -->
         <article class="chapter-block" id="ch-1">
             <div class="chapter-header">
-                <h2>第一章  截稿日</h2>
+                <h2><span>第一章  截稿日</span><span class="chapter-status-badge" id="badge-ch-1"></span></h2>
             </div>
     
-            <section class="section-block" id="sec-1-1">
+            <section class="section-block" id="sec-1-1" data-sec-title="1-1 尼焰">
                 <div class="section-header">
                     <h3>1-1 尼焰</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-1-1">
                     <p class="body-para">螢幕右下角的數字無情地跳動著。</p>
 <p class="body-para">凌晨兩點四十五分。</p>
 <p class="body-para">四坪大的頂樓加蓋工作室裡，空氣彷彿凝結成了一塊厚重的果凍。唯一的光源，是書桌上那面散發著幽冷藍光的二十四吋繪圖螢幕。</p>
@@ -940,11 +1188,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-1-2">
+            <section class="section-block" id="sec-1-2" data-sec-title="1-2 咖啡店">
                 <div class="section-header">
                     <h3>1-2 咖啡店</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-1-2">
                     <p class="body-para">深夜的街道上，初秋的微涼夜風如水般漫過尼焰的雙頰。</p>
 <p class="body-para">他漫無目的地在人行道上走著，試圖讓這股涼意吹散腦袋裡幾乎要沸騰的焦慮。路口那間二十四小時營業的便利商店，正散發著慘白且刺眼的光暈，幾隻趨光的小飛蟲在燈管旁無聊地打轉。偶爾有一兩輛排氣管改裝得震天價響的機車從馬路上呼嘯而過，短暫地打破了夜的寧靜，隨後整座城市又陷入了那種令人窒息的寂寥之中。</p>
 <p class="body-para">尼焰把雙手插在外套口袋裡，指尖無意識地摩挲著那支不小心被帶出來的繪圖筆。</p>
@@ -972,11 +1220,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-1-3">
+            <section class="section-block" id="sec-1-3" data-sec-title="1-3 綠髮女孩">
                 <div class="section-header">
                     <h3>1-3 綠髮女孩</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-1-3">
                     <p class="body-para">當尼焰將手貼上那扇厚實的墨綠色木門並緩緩推開時，掛在門上的黃銅風鈴隨即發出一陣清脆悅耳的「叮鈴」聲。</p>
 <p class="body-para">這道聲音彷彿有一種奇妙的穿透力，瞬間將他腦海中那些關於分鏡草稿、截稿死線、以及編輯奪命連環叩的焦慮雜音，給短暫地隔絕在了門外。</p>
 <p class="body-para">店內的空間比從外面看起來還要深邃一些。燈光昏黃而溫暖，空氣中那股混合著手沖咖啡豆烘焙香氣與廟宇線香的獨特氣味，在這裡變得更加立體且鮮明。老式的留聲機裡，正低聲播放著一首聽不出年代的爵士樂，慵懶的薩克斯風旋律在空氣中緩緩流淌，讓人的步調不自覺地慢了下來。</p>
@@ -1002,11 +1250,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-1-4">
+            <section class="section-block" id="sec-1-4" data-sec-title="1-4 忘情水">
                 <div class="section-header">
                     <h3>1-4 忘情水</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-1-4">
                     <p class="body-para">尼焰將手探進外套口袋，原本以為會觸摸到那支熟悉的白色觸控筆，但指尖傳來的卻只有粗糙的布料紋理。</p>
 <p class="body-para">口袋底部空空如也。</p>
 <p class="body-para">他愣了一下，遲鈍的大腦花了好幾秒鐘才重新運作。他想起剛剛跌坐在沙發上時，似乎隱約聽到了一聲清脆的「喀啦」聲，只是當時滿腦子都被截稿的焦慮塞滿，完全沒有多加理會。</p>
@@ -1041,11 +1289,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-1-5">
+            <section class="section-block" id="sec-1-5" data-sec-title="1-5 空白">
                 <div class="section-header">
                     <h3>1-5 空白</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-1-5">
                     <p class="body-para">黑暗。 無邊無際、彷彿連靈魂都能凍結的黑暗。</p>
 <p class="body-para">尼焰感覺自己像是一顆被拋入深海的石頭，正不斷地、緩慢地向下墜落。那杯紫藍色液體帶來的極度冰寒，已經徹底滲透進他的四肢百骸，甚至鑽進了他的大腦皮層。</p>
 <p class="body-para">在下墜的過程中，他彷彿看見了無數張散發著微光的畫面在眼前如跑馬燈般閃爍：有頂樓加蓋那間悶熱的工作室、有繪圖螢幕上刺眼的白光、有通訊軟體裡那隻戴著黑框眼鏡的貓咪頭像，還有一疊疊畫滿了分鏡的草稿紙。</p>
@@ -1088,14 +1336,14 @@
         <!-- Chapter 2: 第二章  願力的重量與精準派送 -->
         <article class="chapter-block" id="ch-2">
             <div class="chapter-header">
-                <h2>第二章  願力的重量與精準派送</h2>
+                <h2><span>第二章  願力的重量與精準派送</span><span class="chapter-status-badge" id="badge-ch-2"></span></h2>
             </div>
     
-            <section class="section-block" id="sec-2-1">
+            <section class="section-block" id="sec-2-1" data-sec-title="2-1 祈心宮">
                 <div class="section-header">
                     <h3>2-1 祈心宮</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-2-1">
                     <p class="body-para">秋夜的涼風掠過空曠的街頭。</p>
 <p class="body-para">大疫蔓延的城鎮顯得格外寂寥。沿街店家鐵捲門深鎖，連平日人聲鼎沸的深夜小吃攤也不見蹤影。家家戶戶的窗簾後方透著微光，人們被困在各自狹小的屋子裡，街上只剩下一兩輛改裝外送車在空蕩的柏油路上呼嘯而過。</p>
 <p class="body-para">尼焰像個剛裝上發條的木偶，腳步虛浮地跟在薄荷綠雙馬尾的後方，一手下意識地緊攥著外套口袋裡那支冰涼的白色觸控筆。</p>
@@ -1113,11 +1361,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-2-2">
+            <section class="section-block" id="sec-2-2" data-sec-title="2-2 魚頭總管">
                 <div class="section-header">
                     <h3>2-2 魚頭總管</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-2-2">
                     <p class="body-para">跨過流淌著淡金光暈的朱紅門檻，大殿內的忙碌景象遠超尼焰的想像。</p>
 <p class="body-para">挑高的檜木殿堂裡垂掛著數不清的全息光幕，身穿織錦道袍的仙官們手持閃爍藍光的終端機在長廊間疾走，空氣中充斥著劈啪作響的提示音。</p>
 <p class="body-para">【註生娘娘部：急件待派送 3,420 份】</p>
@@ -1157,11 +1405,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-2-3">
+            <section class="section-block" id="sec-2-3" data-sec-title="2-3 註生娘娘的第一單">
                 <div class="section-header">
                     <h3>2-3 註生娘娘的第一單</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-2-3">
                     <p class="dialogue-para">「咚！」</p>
 <p class="body-para">尼焰結結實實地摔在了一處地下車庫模樣的廣場上。</p>
 <p class="body-para">這裡停滿了清一色漆成亮黃與朱紅相間的速克達機車。每輛車的龍頭都刻著太極八卦，排氣管的位置更是裝著兩根散發著淡藍色靈火的懸浮噴射推進器。</p>
@@ -1207,11 +1455,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-2-4">
+            <section class="section-block" id="sec-2-4" data-sec-title="2-4 心念相應的奇蹟">
                 <div class="section-header">
                     <h3>2-4 心念相應的奇蹟</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-2-4">
                     <p class="body-para">尼焰愣了愣，連忙低頭看了一眼終端機上的導航畫面。</p>
 <p class="body-para">螢幕上的紅點果然閃爍在隔壁一條安靜的巷子裡，門牌上清清楚楚標註著——【幸福路 25 號】。</p>
 <p class="dialogue-para">「我……我真的看反了？！」</p>
@@ -1244,11 +1492,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-2-5">
+            <section class="section-block" id="sec-2-5" data-sec-title="2-5 祈心宮巡禮與前輩指導">
                 <div class="section-header">
                     <h3>2-5 祈心宮巡禮與前輩指導</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-2-5">
                     <p class="body-para">按照剛才那位短髮青年的交代，尼焰騎著八卦機車返回祈心宮，將車停在地下二樓的靈能充電樁上，隨後搭乘發光的雲梯來到了位於宮殿二樓的「神界樞紐中庭」。</p>
 <p class="body-para">這裡比他一開始想像的還要龐大、熱鬧得多！</p>
 <p class="dialogue-para">「喲，菜鳥，第一單搞定啦？沒再把門牌看反吧？」</p>
@@ -1270,11 +1518,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-2-6">
+            <section class="section-block" id="sec-2-6" data-sec-title="2-6 月老部的紅線巧克力">
                 <div class="section-header">
                     <h3>2-6 月老部的紅線巧克力</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-2-6">
                     <div class="terminal-card"><div class="terminal-header"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span><span class="terminal-title">✦ 祈心宮・神識終端派工單 ✦</span></div><div class="terminal-body"><div class="terminal-row">【訂單來源：月老部】</div><div class="terminal-row">【派送物品：同心結・紅線黑巧克力（情感相思屬性）】</div><div class="terminal-row">【配送地址：青雲路 88 號 4 樓】</div><div class="terminal-row">【訂單備註：祈願者單戀三年，受疫情阻隔無法相見，請務必於今夜送達！】</div></div></div>
 <p class="body-para">保溫箱自動彈開，裡面靜靜放著一盒用燙金紅紙包裹的小巧巧克力禮盒。</p>
 <p class="body-para">這一次，尼焰跨上機車時眼神無比平靜專注。在靈視之下，那條從禮盒中延伸出的淡紅色光線，在夜風中如指路明燈般引導著他。</p>
@@ -1295,14 +1543,14 @@
         <!-- Chapter 3: 第三章  燃燒成灰的祝福 -->
         <article class="chapter-block" id="ch-3">
             <div class="chapter-header">
-                <h2>第三章  燃燒成灰的祝福</h2>
+                <h2><span>第三章  燃燒成灰的祝福</span><span class="chapter-status-badge" id="badge-ch-3"></span></h2>
             </div>
     
-            <section class="section-block" id="sec-3-1">
+            <section class="section-block" id="sec-3-1" data-sec-title="3-1 數週的修行與百態">
                 <div class="section-header">
                     <h3>3-1 數週的修行與百態</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-3-1">
                     <p class="body-para">在神界的維度流光中，時間悄然流淌。</p>
 <p class="body-para">不知不覺間，尼焰在祈心宮的外送生活中已經度過了整整三個星期。</p>
 <p class="body-para">從一開始連八卦機車靈火都控制不穩的迷茫新手，到現在穿梭在大街小巷、對城鎮每個死角如數家珍的熟練外送員；他在這座大疫封閉的城市裡，見證了無數凡人的喜怒哀樂。</p>
@@ -1317,11 +1565,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-3-2">
+            <section class="section-block" id="sec-3-2" data-sec-title="3-2 灰飛煙滅的符令">
                 <div class="section-header">
                     <h3>3-2 灰飛煙滅的符令</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-3-2">
                     <p class="body-para">育才街 101 號是一棟老舊的五層公寓。</p>
 <p class="body-para">尼焰剛踏上三樓的樓梯轉角，一股極其沉重、陰鬱且令人窒息的氣息便迎面撲來。</p>
 <p class="body-para">在靈視的視野中，301 室的門縫裡正不斷往外滲出濃郁的黑灰色霧氣。那不是物理上的煙霧，而是混雜著逃避、迷茫、自暴自棄與焦慮的負面精神磁場。整扇防盜門彷彿被一層厚重的陰霾所籠罩，連晨光都無法穿透。</p>
@@ -1349,11 +1597,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-3-3">
+            <section class="section-block" id="sec-3-3" data-sec-title="3-3 尼焰的投射與私蓋十印">
                 <div class="section-header">
                     <h3>3-3 尼焰的投射與私蓋十印</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-3-3">
                     <p class="body-para">尼焰站在緊閉的鐵門前，整個人像是被雷擊中一般僵立在原地。</p>
 <p class="dialogue-para">「信念歸零……連神明的符令都會化成灰……」</p>
 <p class="body-para">他怔怔地看著掌心的灰燼，大腦深處彷彿有什麼東西被狠狠刺痛了一下。</p>
@@ -1375,11 +1623,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-3-4">
+            <section class="section-block" id="sec-3-4" data-sec-title="3-4 降維打擊的客訴">
                 <div class="section-header">
                     <h3>3-4 降維打擊的客訴</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-3-4">
                     <p class="body-para">然而，現實卻給了尼焰一記響亮無比的耳光。</p>
 <p class="body-para">在十道頂級文昌神符的極限加持下，凡佑的「大腦運轉速度」與「神經反射神經」確實被強行拔高到了凡人的幾十倍。</p>
 <p class="body-para">但——凡佑的內心依然沒有任何想讀書的意願！</p>
@@ -1407,14 +1655,14 @@
         <!-- Chapter 4: 第四章  神助與自助的平衡 -->
         <article class="chapter-block" id="ch-4">
             <div class="chapter-header">
-                <h2>第四章  神助與自助的平衡</h2>
+                <h2><span>第四章  神助與自助的平衡</span><span class="chapter-status-badge" id="badge-ch-4"></span></h2>
             </div>
     
-            <section class="section-block" id="sec-4-1">
+            <section class="section-block" id="sec-4-1" data-sec-title="4-1 慈悲的水鏡">
                 <div class="section-header">
                     <h3>4-1 慈悲的水鏡</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-4-1">
                     <p class="body-para">神殿最高處，雲霧繚繞，仙樂悠揚。</p>
 <p class="body-para">四根通體由暖玉雕琢而成的通天巨柱支撐著穹頂，地面宛如平靜無波的深邃水面，倒映著浩瀚的星河與凡間萬家燈火的縮影。</p>
 <p class="dialogue-para">「大老闆！您一定要為屬下做主啊！」</p>
@@ -1433,11 +1681,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-4-2">
+            <section class="section-block" id="sec-4-2" data-sec-title="4-2 凡佑心底的微光">
                 <div class="section-header">
                     <h3>4-2 凡佑心底的微光</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-4-2">
                     <p class="dialogue-para">「嗡——」</p>
 <p class="body-para">在指尖觸碰的剎那，周遭宏偉的神殿瞬間化作流光消散。尼焰發現自己與媽祖一同懸浮在了一片無邊無際的虛空之中。</p>
 <p class="body-para">媽祖衣袖輕輕一揮，虛空中浮現出一面巨大無比的通天水鏡，水鏡之中正清晰地映照著育才街 101 號凡佑房間裡的景象。</p>
@@ -1469,11 +1717,11 @@
                 </div>
             </section>
         
-            <section class="section-block" id="sec-4-3">
+            <section class="section-block" id="sec-4-3" data-sec-title="4-3 改變心念即是命運">
                 <div class="section-header">
                     <h3>4-3 改變心念即是命運</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-4-3">
                     <p class="body-para">虛空之中，尼焰呆呆地看著水鏡中那個安靜讀書的少年，眼眶不知何時早已濕潤。</p>
 <p class="dialogue-para">「看懂了嗎？」</p>
 <p class="body-para">媽祖娘娘站在他的身側，長髮與衣袂在星光中輕輕飄揚，語氣慈悲而悠遠：</p>
@@ -1512,14 +1760,14 @@
         <!-- Chapter 5: 尾聲  一年後的奇蹟與神使開工 -->
         <article class="chapter-block" id="ch-5">
             <div class="chapter-header">
-                <h2>尾聲  一年後的奇蹟與神使開工</h2>
+                <h2><span>尾聲  一年後的奇蹟與神使開工</span><span class="chapter-status-badge" id="badge-ch-5"></span></h2>
             </div>
     
-            <section class="section-block" id="sec-5-1">
+            <section class="section-block" id="sec-5-1" data-sec-title="尾聲  一年後的奇蹟與神使開工">
                 <div class="section-header">
                     <h3>尾聲  一年後的奇蹟與神使開工</h3>
                 </div>
-                <div class="section-content">
+                <div class="section-content" id="content-sec-5-1">
                     <p class="body-para">時光荏苒，人間已過了一整年。</p>
 <p class="body-para">肆虐多時的大疫終於全面平息，街頭巷尾重新恢復了往日的車水馬龍。店家拉開鐵捲門，夜市飄散著熟悉的油煙香氣，人們摘下了口罩，露出了久違的笑容。</p>
 <p class="body-para">在這一年裡，尼焰除了維持原本的商業連載之外，將所有的業餘時間與心血，全神貫注地投入了一部全新的短篇原創漫畫。</p>
@@ -1615,8 +1863,8 @@
 
     <!-- Footer -->
     <footer class="reader-footer">
-        <p>《騎蹟到府》現代神話輕小說 正傳完結篇</p>
-        <p style="margin-top: 0.3rem;">神明公關：誰是績優股 原創宇宙企劃 ｜ GitHub Pages 部署版</p>
+        <p>《騎蹟到府》現代神話輕小說 正傳連載篇</p>
+        <p style="margin-top: 0.3rem;">神明公關：誰是績優股 原創宇宙企劃 ｜ GitHub Pages 部署版 ｜ 每日 00:00 解鎖新章</p>
     </footer>
 
     <!-- Bottom Floating Quick Action Bar -->
@@ -1639,29 +1887,29 @@
         </div>
         <div class="toc-list" id="toc-list">
 <a href="#ch-1" class="toc-item-ch" data-target="ch-1">第一章  截稿日</a>
-<a href="#sec-1-1" class="toc-item-sec" data-target="sec-1-1">1-1 尼焰</a>
-<a href="#sec-1-2" class="toc-item-sec" data-target="sec-1-2">1-2 咖啡店</a>
-<a href="#sec-1-3" class="toc-item-sec" data-target="sec-1-3">1-3 綠髮女孩</a>
-<a href="#sec-1-4" class="toc-item-sec" data-target="sec-1-4">1-4 忘情水</a>
-<a href="#sec-1-5" class="toc-item-sec" data-target="sec-1-5">1-5 空白</a>
+<a href="#sec-1-1" class="toc-item-sec" id="toc-link-sec-1-1" data-target="sec-1-1"><span>1-1 尼焰</span><span class="toc-tag-slot" id="toc-tag-sec-1-1"></span></a>
+<a href="#sec-1-2" class="toc-item-sec" id="toc-link-sec-1-2" data-target="sec-1-2"><span>1-2 咖啡店</span><span class="toc-tag-slot" id="toc-tag-sec-1-2"></span></a>
+<a href="#sec-1-3" class="toc-item-sec" id="toc-link-sec-1-3" data-target="sec-1-3"><span>1-3 綠髮女孩</span><span class="toc-tag-slot" id="toc-tag-sec-1-3"></span></a>
+<a href="#sec-1-4" class="toc-item-sec" id="toc-link-sec-1-4" data-target="sec-1-4"><span>1-4 忘情水</span><span class="toc-tag-slot" id="toc-tag-sec-1-4"></span></a>
+<a href="#sec-1-5" class="toc-item-sec" id="toc-link-sec-1-5" data-target="sec-1-5"><span>1-5 空白</span><span class="toc-tag-slot" id="toc-tag-sec-1-5"></span></a>
 <a href="#ch-2" class="toc-item-ch" data-target="ch-2">第二章  願力的重量與精準派送</a>
-<a href="#sec-2-1" class="toc-item-sec" data-target="sec-2-1">2-1 祈心宮</a>
-<a href="#sec-2-2" class="toc-item-sec" data-target="sec-2-2">2-2 魚頭總管</a>
-<a href="#sec-2-3" class="toc-item-sec" data-target="sec-2-3">2-3 註生娘娘的第一單</a>
-<a href="#sec-2-4" class="toc-item-sec" data-target="sec-2-4">2-4 心念相應的奇蹟</a>
-<a href="#sec-2-5" class="toc-item-sec" data-target="sec-2-5">2-5 祈心宮巡禮與前輩指導</a>
-<a href="#sec-2-6" class="toc-item-sec" data-target="sec-2-6">2-6 月老部的紅線巧克力</a>
+<a href="#sec-2-1" class="toc-item-sec" id="toc-link-sec-2-1" data-target="sec-2-1"><span>2-1 祈心宮</span><span class="toc-tag-slot" id="toc-tag-sec-2-1"></span></a>
+<a href="#sec-2-2" class="toc-item-sec" id="toc-link-sec-2-2" data-target="sec-2-2"><span>2-2 魚頭總管</span><span class="toc-tag-slot" id="toc-tag-sec-2-2"></span></a>
+<a href="#sec-2-3" class="toc-item-sec" id="toc-link-sec-2-3" data-target="sec-2-3"><span>2-3 註生娘娘的第一單</span><span class="toc-tag-slot" id="toc-tag-sec-2-3"></span></a>
+<a href="#sec-2-4" class="toc-item-sec" id="toc-link-sec-2-4" data-target="sec-2-4"><span>2-4 心念相應的奇蹟</span><span class="toc-tag-slot" id="toc-tag-sec-2-4"></span></a>
+<a href="#sec-2-5" class="toc-item-sec" id="toc-link-sec-2-5" data-target="sec-2-5"><span>2-5 祈心宮巡禮與前輩指導</span><span class="toc-tag-slot" id="toc-tag-sec-2-5"></span></a>
+<a href="#sec-2-6" class="toc-item-sec" id="toc-link-sec-2-6" data-target="sec-2-6"><span>2-6 月老部的紅線巧克力</span><span class="toc-tag-slot" id="toc-tag-sec-2-6"></span></a>
 <a href="#ch-3" class="toc-item-ch" data-target="ch-3">第三章  燃燒成灰的祝福</a>
-<a href="#sec-3-1" class="toc-item-sec" data-target="sec-3-1">3-1 數週的修行與百態</a>
-<a href="#sec-3-2" class="toc-item-sec" data-target="sec-3-2">3-2 灰飛煙滅的符令</a>
-<a href="#sec-3-3" class="toc-item-sec" data-target="sec-3-3">3-3 尼焰的投射與私蓋十印</a>
-<a href="#sec-3-4" class="toc-item-sec" data-target="sec-3-4">3-4 降維打擊的客訴</a>
+<a href="#sec-3-1" class="toc-item-sec" id="toc-link-sec-3-1" data-target="sec-3-1"><span>3-1 數週的修行與百態</span><span class="toc-tag-slot" id="toc-tag-sec-3-1"></span></a>
+<a href="#sec-3-2" class="toc-item-sec" id="toc-link-sec-3-2" data-target="sec-3-2"><span>3-2 灰飛煙滅的符令</span><span class="toc-tag-slot" id="toc-tag-sec-3-2"></span></a>
+<a href="#sec-3-3" class="toc-item-sec" id="toc-link-sec-3-3" data-target="sec-3-3"><span>3-3 尼焰的投射與私蓋十印</span><span class="toc-tag-slot" id="toc-tag-sec-3-3"></span></a>
+<a href="#sec-3-4" class="toc-item-sec" id="toc-link-sec-3-4" data-target="sec-3-4"><span>3-4 降維打擊的客訴</span><span class="toc-tag-slot" id="toc-tag-sec-3-4"></span></a>
 <a href="#ch-4" class="toc-item-ch" data-target="ch-4">第四章  神助與自助的平衡</a>
-<a href="#sec-4-1" class="toc-item-sec" data-target="sec-4-1">4-1 慈悲的水鏡</a>
-<a href="#sec-4-2" class="toc-item-sec" data-target="sec-4-2">4-2 凡佑心底的微光</a>
-<a href="#sec-4-3" class="toc-item-sec" data-target="sec-4-3">4-3 改變心念即是命運</a>
+<a href="#sec-4-1" class="toc-item-sec" id="toc-link-sec-4-1" data-target="sec-4-1"><span>4-1 慈悲的水鏡</span><span class="toc-tag-slot" id="toc-tag-sec-4-1"></span></a>
+<a href="#sec-4-2" class="toc-item-sec" id="toc-link-sec-4-2" data-target="sec-4-2"><span>4-2 凡佑心底的微光</span><span class="toc-tag-slot" id="toc-tag-sec-4-2"></span></a>
+<a href="#sec-4-3" class="toc-item-sec" id="toc-link-sec-4-3" data-target="sec-4-3"><span>4-3 改變心念即是命運</span><span class="toc-tag-slot" id="toc-tag-sec-4-3"></span></a>
 <a href="#ch-5" class="toc-item-ch" data-target="ch-5">尾聲  一年後的奇蹟與神使開工</a>
-<a href="#sec-5-1" class="toc-item-sec" data-target="sec-5-1">尾聲  一年後的奇蹟與神使開工</a>
+<a href="#sec-5-1" class="toc-item-sec" id="toc-link-sec-5-1" data-target="sec-5-1"><span>尾聲  一年後的奇蹟與神使開工</span><span class="toc-tag-slot" id="toc-tag-sec-5-1"></span></a>
 
         </div>
     </div>
@@ -1722,12 +1970,21 @@
         </div>
 
         <!-- Reset Button -->
-        <button id="btn-reset-settings" style="width: 100%; padding: 0.6rem; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-muted); border-radius: 8px; font-size: 0.85rem; cursor: pointer; margin-top: 1rem;">恢復預設排版</button>
+        <button id="btn-reset-settings" style="width: 100%; padding: 0.6rem; background: var(--bg-elevated); border: 1px solid var(--border-subtle); color: var(--text-muted); border-radius: 8px; font-size: 0.85rem; cursor: pointer; margin-top: 0.5rem;">恢復預設排版</button>
+
+        <!-- Serial Preview Debug Toggle (for testing) -->
+        <div class="setting-group" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--border-subtle);">
+            <span class="setting-label">連載預覽模式 (調試/作者)</span>
+            <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); cursor: pointer;">
+                <input type="checkbox" id="check-unlock-all" style="accent-color: var(--accent-gold);">
+                <span>作者特權：預覽全書解鎖章節</span>
+            </label>
+        </div>
     </div>
 
-    <!-- Resume Reading Toast -->
+    <!-- Generic Toast -->
     <div class="toast-resume" id="toast-resume">
-        <div class="toast-text">
+        <div class="toast-text" id="toast-text">
             <span>📍 發現上次閱讀進度 (<span id="resume-percent">0%</span>)</span>
         </div>
         <button class="toast-btn" id="btn-resume-jump">前往</button>
@@ -1736,6 +1993,39 @@
     <!-- Interactive Script -->
     <script>
         (function() {
+            // ==========================================
+            // 1. 連載排程配置 (Serialization Schedule)
+            // ==========================================
+            // 基準日 (發布日 / Day 0)
+            // 第一章全部解鎖 + 2-1 首發
+            // 從第 1 天起每天解鎖一個小章節
+            const SERIAL_CONFIG = {
+                // 發布日日期字串 (YYYY-MM-DD)
+                startDate: "2026-08-19",
+                // 各小節解鎖所需天數 offset (0 = 發布日當天即解鎖)
+                schedule: [
+                    { id: "sec-1-1", title: "1-1 尼焰", dayOffset: 0 },
+                    { id: "sec-1-2", title: "1-2 咖啡店", dayOffset: 0 },
+                    { id: "sec-1-3", title: "1-3 綠髮女孩", dayOffset: 0 },
+                    { id: "sec-1-4", title: "1-4 奉旨", dayOffset: 0 },
+                    { id: "sec-1-5", title: "1-5 啟程", dayOffset: 0 },
+                    { id: "sec-2-1", title: "2-1 密室", dayOffset: 0 }, // 發布日首發更新
+                    { id: "sec-2-2", title: "2-2 降妖處", dayOffset: 1 },
+                    { id: "sec-2-3", title: "2-3 生死簿第二卷", dayOffset: 2 },
+                    { id: "sec-2-4", title: "2-4 陰陽交界", dayOffset: 3 },
+                    { id: "sec-2-5", title: "2-5 密室結界與陣法", dayOffset: 4 },
+                    { id: "sec-2-6", title: "2-6 穿梭時空法力", dayOffset: 5 },
+                    { id: "sec-3-1", title: "3-1 眾神陣列與動態", dayOffset: 6 },
+                    { id: "sec-3-2", title: "3-2 陣法顯現威力", dayOffset: 7 },
+                    { id: "sec-3-3", title: "3-3 密語與小心得利", dayOffset: 8 },
+                    { id: "sec-3-4", title: "3-4 歸途", dayOffset: 9 },
+                    { id: "sec-4-1", title: "4-1 留步", dayOffset: 10 },
+                    { id: "sec-4-2", title: "4-2 絕境與逆轉", dayOffset: 11 },
+                    { id: "sec-4-3", title: "4-3 核心與最後宿命", dayOffset: 12 },
+                    { id: "sec-5-1", title: "尾聲 一年後的承諾與新起點", dayOffset: 13 }
+                ]
+            };
+
             // State
             const state = {
                 theme: localStorage.getItem('novel_theme') || 'dark-cyber',
@@ -1744,7 +2034,8 @@
                 lineHeight: parseFloat(localStorage.getItem('novel_line_height') || '1.95'),
                 maxWidth: parseInt(localStorage.getItem('novel_max_width') || '760'),
                 lastScrollY: parseInt(localStorage.getItem('novel_scroll_y') || '0'),
-                lastPercent: parseInt(localStorage.getItem('novel_scroll_percent') || '0')
+                lastPercent: parseInt(localStorage.getItem('novel_scroll_percent') || '0'),
+                unlockAllPreview: localStorage.getItem('novel_unlock_all') === 'true'
             };
 
             // DOM elements
@@ -1756,7 +2047,9 @@
             const tocDrawer = document.getElementById('toc-drawer');
             const settingsDrawer = document.getElementById('settings-drawer');
             const toastResume = document.getElementById('toast-resume');
-            const resumePercent = document.getElementById('resume-percent');
+            const toastText = document.getElementById('toast-text');
+            const btnResumeJump = document.getElementById('btn-resume-jump');
+            const checkUnlockAll = document.getElementById('check-unlock-all');
 
             // Sliders
             const sliderFontSize = document.getElementById('slider-font-size');
@@ -1765,6 +2058,164 @@
             const valLineHeight = document.getElementById('val-line-height');
             const sliderMaxWidth = document.getElementById('slider-max-width');
             const valMaxWidth = document.getElementById('val-max-width');
+
+            // Store original section contents in memory for restore when unlocked
+            const originalContents = {};
+            document.querySelectorAll('.section-block').forEach(sec => {
+                const contentDiv = sec.querySelector('.section-content');
+                if (contentDiv) {
+                    originalContents[sec.id] = contentDiv.innerHTML;
+                }
+            });
+
+            // Calculate elapsed days from start date
+            function getElapsedDays() {
+                const now = new Date();
+                const start = new Date(SERIAL_CONFIG.startDate + "T00:00:00");
+                const diffTime = now.getTime() - start.getTime();
+                const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+                return Math.max(0, diffDays);
+            }
+
+            // Format date for unlock
+            function getUnlockDateString(dayOffset) {
+                const start = new Date(SERIAL_CONFIG.startDate + "T00:00:00");
+                const targetDate = new Date(start.getTime() + dayOffset * 24 * 60 * 60 * 1000);
+                const month = targetDate.getMonth() + 1;
+                const date = targetDate.getDate();
+                return `${month}月${date}日`;
+            }
+
+            function showToast(message, buttonText = "好的", onClick = null) {
+                toastText.innerHTML = `<span>${message}</span>`;
+                btnResumeJump.textContent = buttonText;
+                btnResumeJump.onclick = () => {
+                    toastResume.classList.remove('show');
+                    if (onClick) onClick();
+                };
+                toastResume.classList.add('show');
+                setTimeout(() => {
+                    toastResume.classList.remove('show');
+                }, 5000);
+            }
+
+            // ==========================================
+            // 2. Apply Serialization Locks
+            // ==========================================
+            function applySerialization() {
+                const elapsedDays = getElapsedDays();
+                const isUnlockAll = state.unlockAllPreview;
+                let unlockedCount = 0;
+                let latestUnlockedSec = SERIAL_CONFIG.schedule[0];
+
+                SERIAL_CONFIG.schedule.forEach(item => {
+                    const isUnlocked = isUnlockAll || (elapsedDays >= item.dayOffset);
+                    const secEl = document.getElementById(item.id);
+                    const contentEl = document.getElementById(`content-${item.id}`);
+                    const tocLink = document.getElementById(`toc-link-${item.id}`);
+                    const tocTag = document.getElementById(`toc-tag-${item.id}`);
+
+                    if (isUnlocked) {
+                        unlockedCount++;
+                        latestUnlockedSec = item;
+
+                        // Restore original content
+                        if (contentEl && originalContents[item.id]) {
+                            contentEl.innerHTML = originalContents[item.id];
+                        }
+
+                        // TOC unlocked
+                        if (tocLink) {
+                            tocLink.classList.remove('locked');
+                            tocLink.setAttribute('href', `#${item.id}`);
+                            tocLink.onclick = null;
+                        }
+
+                        // If unlocked today & it's not day 0 base chapters
+                        if (tocTag) {
+                            if (!isUnlockAll && item.dayOffset === elapsedDays && item.dayOffset > 0) {
+                                tocTag.innerHTML = `<span class="toc-new-tag">✨ 今日更新</span>`;
+                            } else if (item.dayOffset === 0 && item.id === "sec-2-1") {
+                                tocTag.innerHTML = `<span class="toc-new-tag">✨ 首發更新</span>`;
+                            } else {
+                                tocTag.innerHTML = '';
+                            }
+                        }
+                    } else {
+                        // Locked Section
+                        const unlockDateStr = getUnlockDateString(item.dayOffset);
+                        const daysLeft = item.dayOffset - elapsedDays;
+                        const daysLeftText = daysLeft === 1 ? "明日 00:00 解鎖" : `${daysLeft} 天後解鎖`;
+
+                        // Render Lock Card into Content
+                        if (contentEl) {
+                            contentEl.innerHTML = `
+                                <div class="locked-section-card">
+                                    <div class="lock-icon-wrap">🔒</div>
+                                    <h4 class="lock-card-title">【神識封印・連載鎖定中】</h4>
+                                    <p class="lock-card-desc">
+                                        八卦噴射機車穿梭街頭，神明派件加速中！<br>
+                                        本章節預計於 <strong>${unlockDateStr} 00:00</strong> 自動解鎖，敬請期待。
+                                    </p>
+                                    <div class="lock-countdown-badge">
+                                        ⏳ 距解鎖倒數：${daysLeftText}
+                                    </div>
+                                    <div class="lock-card-actions">
+                                        <a href="#${latestUnlockedSec.id}" class="lock-action-btn">📖 閱讀最新已解鎖章節</a>
+                                        <button class="lock-action-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('小說連結已複製！邀請朋友一起追更吧 🚀');">🔗 分享追更</button>
+                                    </div>
+                                </div>
+                            `;
+                        }
+
+                        // TOC locked
+                        if (tocLink) {
+                            tocLink.classList.add('locked');
+                            tocLink.removeAttribute('href');
+                            tocLink.onclick = (e) => {
+                                e.preventDefault();
+                                showToast(`🔒 ${item.title} 將於 ${unlockDateStr} 00:00 解鎖，敬請鎖定連載！`, "知道了");
+                            };
+                        }
+
+                        if (tocTag) {
+                            tocTag.innerHTML = `<span class="toc-lock-tag">🔒 ${unlockDateStr}</span>`;
+                        }
+                    }
+                });
+
+                // Update Hero banner
+                const heroLatest = document.getElementById('hero-latest-chapter-name');
+                const heroCount = document.getElementById('hero-unlocked-count');
+                const heroJump = document.getElementById('hero-jump-latest');
+                if (heroLatest) heroLatest.textContent = latestUnlockedSec.title;
+                if (heroCount) heroCount.textContent = unlockedCount;
+                if (heroJump) heroJump.setAttribute('href', `#${latestUnlockedSec.id}`);
+
+                // Update Chapter headers (if all sections locked in a chapter)
+                document.querySelectorAll('.chapter-block').forEach(chBlock => {
+                    const chId = chBlock.id;
+                    const badge = document.getElementById(`badge-${chId}`);
+                    const secLinks = chBlock.querySelectorAll('.section-block');
+                    let allLocked = true;
+                    secLinks.forEach(sec => {
+                        const sched = SERIAL_CONFIG.schedule.find(s => s.id === sec.id);
+                        if (sched && (isUnlockAll || elapsedDays >= sched.dayOffset)) {
+                            allLocked = false;
+                        }
+                    });
+
+                    if (badge) {
+                        if (allLocked) {
+                            badge.textContent = "🔒 即將連載";
+                            badge.className = "chapter-status-badge locked";
+                        } else {
+                            badge.textContent = "";
+                            badge.className = "chapter-status-badge";
+                        }
+                    }
+                });
+            }
 
             // Apply Settings
             function applySettings() {
@@ -1799,6 +2250,7 @@
                 valLineHeight.textContent = state.lineHeight;
                 sliderMaxWidth.value = state.maxWidth;
                 valMaxWidth.textContent = state.maxWidth + 'px';
+                if (checkUnlockAll) checkUnlockAll.checked = state.unlockAllPreview;
 
                 // Save to localStorage
                 localStorage.setItem('novel_theme', state.theme);
@@ -1895,7 +2347,9 @@
             // TOC click jumps
             document.querySelectorAll('#toc-list a').forEach(link => {
                 link.addEventListener('click', (e) => {
-                    closeDrawers();
+                    if (!link.classList.contains('locked')) {
+                        closeDrawers();
+                    }
                 });
             });
 
@@ -1947,32 +2401,37 @@
                 applySettings();
             };
 
+            if (checkUnlockAll) {
+                checkUnlockAll.onchange = (e) => {
+                    state.unlockAllPreview = e.target.checked;
+                    localStorage.setItem('novel_unlock_all', state.unlockAllPreview);
+                    applySerialization();
+                    showToast(state.unlockAllPreview ? "🔓 作者預覽模式已開啟（全章節已解鎖）" : "🔒 連載排程已恢復");
+                };
+            }
+
             document.getElementById('btn-reset-settings').onclick = () => {
                 state.theme = 'dark-cyber';
                 state.fontFamily = 'serif';
                 state.fontSize = 18;
                 state.lineHeight = 1.95;
                 state.maxWidth = 760;
+                state.unlockAllPreview = false;
+                localStorage.removeItem('novel_unlock_all');
                 applySettings();
+                applySerialization();
             };
 
             // Resume Reading Toast
             if (state.lastScrollY > 300 && state.lastPercent > 2) {
-                resumePercent.textContent = state.lastPercent + '%';
-                toastResume.classList.add('show');
-
-                document.getElementById('btn-resume-jump').onclick = () => {
+                showToast(`📍 發現上次閱讀進度 (${state.lastPercent}%)`, "前往", () => {
                     window.scrollTo({ top: state.lastScrollY, behavior: 'smooth' });
-                    toastResume.classList.remove('show');
-                };
-
-                setTimeout(() => {
-                    toastResume.classList.remove('show');
-                }, 8000);
+                });
             }
 
             // Init
             applySettings();
+            applySerialization();
             onScroll();
         })();
     </script>
